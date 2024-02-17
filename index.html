@@ -37,21 +37,20 @@
     </script>
     <script>
     const balanceElement = document.getElementById("balance-amount");
-    let balance = 100;
 
-    function updateBalance() {
-      balanceElement.textContent = balance;
-    }
+function updateBalance() {
+  balanceElement.textContent = balance.toString();
+}
 
-    function subtractMoney(amount) {
-      balance -= amount;
-      updateBalance();
-    }
+function subtractMoney(amount) {
+  balance -= amount;
+  updateBalance();
+}
 
-    const button = document.getElementById("play-button");
-    button.addEventListener("click", () => {
-      subtractMoney(10);
-    });
+const button = document.getElementById("play-button");
+button.addEventListener("click", () => {
+  subtractMoney(10);
+});
     </script>
         <div class="win">
             <ul>
