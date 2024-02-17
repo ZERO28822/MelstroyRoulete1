@@ -28,36 +28,17 @@
         </div>
     </div>
     <p style="text-align: center">
-           <button class="glow-on-hover" type="button" onclick="playMusic()">Нажми чтобы выиграть</button>
+           <button class="glow-on-hover" type="button" onclick="playMusic();decreaseBalance()">Нажми чтобы выиграть</button>
            <script>
             function playMusic() {
-            var audio = new Audio('sound//go-new-gambling.mp3');
+            var audio = new Audio('C:\\Users\\111\\Desktop\\игра\\sound\\go-new-gambling.mp3');
             audio.play();
-}
-    </script>
-    <script>
-    let balance = 100;
-
-const balanceElement = document.getElementById("balance");
-
-function updateBalance() {
-  balanceElement.textContent = balance.toString();
-}
-
-function subtractMoney(amount) {
-  balance -= amount;
-  updateBalance();
-}
-
-const button = document.getElementById("glow-on-hover");
-button.addEventListener("click", () => {
-  subtractMoney(10);
-});
-    </script>
-        <div class="win">
-            <ul>
-                
-            </ul>
+}      
+        </script>
+         <h1>БАЛАНС</h1>
+         <H1 align="center" id="balance">100</H1>
+         <H1 align="center" id="balance">↓↓↓нет денег тогда тебе сюда↓↓↓</H1>
+         <div class="win">
         </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="./script.js"></script>
@@ -78,17 +59,29 @@ button.addEventListener("click", () => {
   </div>
   </div>
   </div>
-  </div>
         <div id="settings-modal" class="modal">
     <div class="modal-content">
       <span class="close-button" onclick="closeSettingsModal()">&times;</span>
       <h1>Настройки</h1>
       <a href="#" class="button2" tabindex="0">выкл.музыку</a>
     </div>
+  </div>
     </div>
-    <div class="balance">
-      <span>Баланс:</span>
-      <span id="balance-amount">100</span>
-    </div>
+  <script>
+var balance = 100;
+        
+        function updateBalance() {
+            document.getElementById("balance").textContent = balance;
+        }
+        
+        function decreaseBalance() {
+            if (balance >= 10) {
+                balance -= 10;
+                updateBalance();
+            }
+        }
+        window.onload = updateBalance;
+      </script>
+  
   </body>
 </html>
