@@ -36,7 +36,9 @@
 }
     </script>
     <script>
-    const balanceElement = document.getElementById("balance-amount");
+    let balance = 100;
+
+const balanceElement = document.getElementById("balance");
 
 function updateBalance() {
   balanceElement.textContent = balance.toString();
@@ -47,7 +49,7 @@ function subtractMoney(amount) {
   updateBalance();
 }
 
-const button = document.getElementById("play-button");
+const button = document.getElementById("glow-on-hover");
 button.addEventListener("click", () => {
   subtractMoney(10);
 });
