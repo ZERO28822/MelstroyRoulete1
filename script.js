@@ -19,7 +19,7 @@ $(document).ready(function () {
     $('.window').animate({
       right: ((x*130)+(x*8-12)-119)
     }, 9000, function() {
-      var audio = new Audio('C:\\Users\\111\\Desktop\\игра\\sound\\gambling.mp3');
+      var audio = new Audio('sound/gambling.mp3');
       audio.play();
       
       for (var i = 0; i < 400; i++) {
