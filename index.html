@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MelstroyRoulet</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body class="gradient-background">
+  <h1>MELSTROYroulete</h1>
+  <!-- partial:index.partial.html -->
+        <div class="wraper">
+        <div class="arrowup"></div>
+        <div class="arrowdown"></div>
+        <div class="element"></div>
+        <div class="window">
+        <ul class="list">
+            
+        </ul>
+            <ul class="list">
+                <li><img src="https://w.forfun.com/fetch/c5/c514ddd3da0d86f1348f4b10560f7f35.jpeg" alt=""></li>
+                <li><img src="https://fikiwiki.com/uploads/posts/2022-02/1644855636_51-fikiwiki-com-p-kartinki-khd-kachestva-54.jpg" alt=""></li>
+                <li><img src="https://wallup.net/wp-content/uploads/2019/09/653132-mountains-landscape-nature-mountain-river-lake.jpg" alt=""></li>
+                <li><img src="https://www.rabstol.net/uploads/gallery/main/34/rabstol_net_waterfalls_1.jpg" alt=""></li>
+                <li><img src="https://gas-kvas.com/uploads/posts/2023-02/1675446656_gas-kvas-com-p-kartinki-na-fonovii-risunok-rabochego-27.jpg" alt=""></li>
+                <li><img src="https://w.forfun.com/fetch/4d/4db3e5abc21abd5dcdcef0dc331dc53a.jpeg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <p style="text-align: center">
+           <button class="glow-on-hover" type="button" onclick="playMusic()">Нажми чтобы выиграть</button>
+           <script>
+            function playMusic() {
+            var audio = new Audio('C:\\Users\\111\\Desktop\\игра\\sound\\go-new-gambling.mp3');
+            audio.play();
+}
+    </script>
+    <script>
+      const balanceElement = document.getElementById("balance-amount");
+let balance = 100;
+
+function updateBalance() {
+  balanceElement.textContent = balance;
+}
+
+function subtractMoney(amount) {
+  balance -= amount;
+  updateBalance();
+}
+
+const button = document.getElementById("play-button");
+button.addEventListener("click", () => {
+  subtractMoney(10);
+});
+    </script>
+        <div class="win">
+            <ul>
+                
+            </ul>
+        </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">МЕНЮ</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#" onclick="openInventoryModal()">ИНВЕНТАРЬ</a>
+      <a href="#"onclick="openSettingsModal()">НАСТРОЙКИ</a>
+      <a href="https://vk.com/zero656">РАЗРАБОТЧИК</a>
+      <a href="https://www.donationalerts.com/r/zerooo1345">ПОДДЕРЖКА РАЗРАБОТЧИКА</a>
+    </div>
+  </div>
+  <div id="inventory-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeInventoryModal()">&times;</span>
+      <h1>Инвентарь</h1>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+        <div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeSettingsModal()">&times;</span>
+      <h1>Настройки</h1>
+      <a href="#" class="button2" tabindex="0">выкл.музыку</a>
+    </div>
+    </div>
+    <div class="balance">
+      <span>Баланс:</span>
+      <span id="balance-amount">100</span>
+    </div>
+  </body>
+</html>
